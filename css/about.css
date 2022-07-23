@@ -531,7 +531,7 @@ img {
 
 .main-work {
   width: 100%;
-  background: url(/img/background/main-bg.png);
+  background: url(../img/background/main-bg.png);
   margin: 100px 0;
 }
 .main-work .main-work-title {
@@ -614,7 +614,7 @@ img {
 
 .main-quality {
   margin: 50px auto;
-  background: url(/img/background/main2.jpg) no-repeat;
+  background: url(../img/background/main2.jpg) no-repeat;
   background-attachment: fixed;
 }
 .main-quality .main-quality-content .row .quality-content-left .quality-left-title {

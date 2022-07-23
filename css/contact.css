@@ -642,7 +642,7 @@ img {
 
 .main-quality {
   margin: 50px auto;
-  background: url(/img/background/main2.jpg) no-repeat;
+  background: url(../img/background/main2.jpg) no-repeat;
   background-attachment: fixed;
 }
 .main-quality .main-quality-content .row .quality-content-left .quality-left-title {
