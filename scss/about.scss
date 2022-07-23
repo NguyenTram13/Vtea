@@ -1,4 +1,12 @@
-@import 'style';
+@import 'part/base';
+@import 'part/font';
+@import 'part/reset';
+@import 'part/valiable';
+@import 'part/mixin';
+
+
+ @import 'components/header';
+ @import 'components/footer';
 @import 'home/main-work';
 @import 'home/main-quality';
 

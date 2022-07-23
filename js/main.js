@@ -23,25 +23,32 @@ window.addEventListener("load", function(){
     })
     const header= document.querySelector(".header")
     const heightHeader= header && header.offsetHeight;
+    console.log(header);
+    console.log(heightHeader);
+   
+ 
 
-    window.addEventListener("scroll", function(e){
+   
+
+    window.addEventListener("scroll",   function(e){
+        
         let scroll= window.pageYOffset;
+        console.log(scroll);
         if(scroll>=heightHeader){
             header.classList.add("bg_header");
         }
         else{
             header.classList.remove("bg_header");
-
+    
         }
     })
-
-   
-
 })
+ 
+
 //sclick  slider
 $(document).ready(function(){
     $('.main-background').slick({
-        // autoplay:true,
+        autoplay:true,
         Swipe: true,
         slidesToShow:1,
         infinity: true,
