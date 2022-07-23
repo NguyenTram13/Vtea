@@ -1,6 +1,6 @@
 .main-produce{
     width: 100%;
-    background: url(/img/background/main-bg.png) no-repeat;
+    background: url(../img/background/main-bg.png) no-repeat;
     background-size: cover; 
     .main-produce-content{
         @include flex(space-around,flex-start,none);
