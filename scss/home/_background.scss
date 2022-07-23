@@ -1,0 +1,115 @@
+.main {
+  .main-background {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    &:hover{
+      .slick-arrow{
+     @include visibility(visible, 1);
+    //  transform: translateX(-100%);
+        
+      }
+    }
+    .slick-arrow{
+      width: 30px;
+      height: 30px;
+      position: absolute; 
+      font-size: 4rem;
+      top: 50%;
+      transform: translateY((-50%));
+      color: $textColor8;
+      background-color: transparent;
+     @include flex(center, center,none);
+     @include visibility(hidden, 0);
+     @include transition(0.25s, linear);
+     
+     &:hover{
+      color: $primaryColor;
+
+     }
+    }
+    .slick-prev{
+        left: 10%;
+        z-index: 2;
+        // transform: translateX(-50%);
+    }
+    .slick-next{
+      
+      right: 10%;
+      z-index: 2;
+      // transform: translateX(50%);
+      
+  }
+    .main-background-content {
+      background: url(../../img/background/header-bg.jpg) no-repeat;
+      background-size: cover;
+      max-width: 100%;
+      height: 100vh;
+      
+      .background-text {
+        width: 100%;
+        z-index: 777;
+        // height: 100%;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        h4 {
+          @include font($fontPlay, 1.5rem, $whiteColor);
+        }
+        h3 {
+          margin-bottom: 32px;
+          @include font($fontPlay, 5.6rem, $whiteColor);
+        }
+
+        a {
+          border: 1px solid $primaryColor;
+          border-radius: 40px;
+          padding: 12px;
+          text-transform: uppercase;
+          @include font($fontPlay, 1.2rem, $whiteColor);
+          &:hover {
+            @include hover(pointer, $primaryColor,none);
+            
+        }
+      }
+    }
+  }
+  .main-background2-content {
+    background: url(../../img/background/header-bg2.jpg) no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    height: 100vh;
+    
+    .background-text {
+      width: 100%;
+  
+      position: absolute;
+      text-align: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      h4 {
+        @include font($fontPlay, 1.5rem, $whiteColor);
+      }
+      h3 {
+        margin-bottom: 32px;
+        @include font($fontPlay, 5.6rem, $whiteColor);
+      }
+
+      a {
+        border: 1px solid $primaryColor;
+        border-radius: 40px;
+        padding: 12px;
+        text-transform: uppercase;
+        @include font($fontPlay, 1.2rem, $whiteColor);
+        &:hover {
+          @include hover(pointer, $primaryColor,none);
+          
+      }
+    }
+  }
+}
+}
+}

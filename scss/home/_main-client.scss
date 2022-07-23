@@ -1,0 +1,51 @@
+.main-client{
+    margin: 50px auto;
+   
+    .main-client-content{
+
+        .row{
+            .main-client-left{
+                padding: 24px;
+            }
+            .main-client-right{
+                // padding: 24px;
+                background: url('../img/background/client-bg.png') no-repeat;
+                background-size: cover;
+
+                @include flex(none, center, column);
+                .client-right-img{
+                    img{
+                        
+                        @include Size(59px,49px,cover);
+                    }
+                }
+                margin: auto 0;
+                .client-right-title{
+                    text-align: center;
+                    span{
+                        @include font($fontPlay, 1.875rem, $textColor);
+                        margin: 12px 0;
+                        @include flex(center,center,none);
+                        img{
+                            padding: 4px;
+                            @include Size(36px, 26px, cover)
+                        }
+                    }
+                    
+                    p{
+                        @include font($fontPlay, 0.875rem, $textColor8);
+    
+                    }
+                    h3{
+                        @include font($fontPlay, 1.125rem, $textColor);
+    
+                    }
+                    h4{
+                        @include font($fontPlay, 0.875rem, $textColor8);
+    
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,90 @@
+.main-shop{
+    width: 100%;
+    .main-shop-content{
+        .ms-content-left{
+
+             width: 100%;
+
+            padding: 12px;
+            .msc-left-item{
+
+                @include font($fontPopin,0.875rem, $textColor6 );
+                border-bottom: 1px solid #ccc;
+                margin-bottom: 12px;
+                h3{
+                    @include font($fontPlay,1.125rem, $textColor );
+                }
+                .mscl-top-item{
+                    padding: 0;
+                    li{
+                        
+                        padding:   8px 0;
+                        a{
+                    @include font($fontPopin,0.875rem, $textColor6 );
+                            &:hover{
+                                color: $primaryColor;
+                            }
+                        }
+                    }
+                }
+                .form-check{
+                    &:hover{
+                        color: $primaryColor;
+                    }
+                }
+                .filter-price{
+                    span{
+                // @include font($fontPopin,0.875rem, $textColor);
+
+                        color: $textColor;
+                        &:hover{
+                            color: $primaryColor;
+                        }
+                    }
+                }
+                button{
+                    background-color: $textColor;
+                    color: $whiteColor;
+                    text-transform: uppercase;
+                    padding: 8px 28px;
+                    margin: 12px 0;
+                    &:hover{
+                        background-color: rgb(69, 67, 67);
+                    }
+                }
+            }
+        }
+        .ms-content-right{
+            width: 100%;
+            .msc-right-nav{
+                width: 100%;
+                @include font($fontPlay, 0.8125rem, $textColor);
+                @include flex(space-between, center, none);
+
+                .mscr-nav-sort{
+                    width: 30%;
+                    @include flex(flex-start, center, row);
+
+                    span{
+                        width: 30%;
+                        text-transform: uppercase;
+                    }
+                    .form-select{
+                @include font($fontPopin, 0.8125rem, $textColor);
+
+                    }
+                }
+                .mscr-nav-show{
+                    @extend .mscr-nav-sort;
+                    .mscrn-show-icon{
+                        text-align: end;
+                        width: 50%;
+                        font-size: 1.5rem;
+                        margin-left: 10px;
+                    }
+                }
+            }
+
+        }
+    }
+}

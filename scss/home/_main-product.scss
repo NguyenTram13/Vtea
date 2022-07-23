@@ -1,0 +1,149 @@
+.main-product{
+    width: 100%;
+    margin: 50px 0;
+    .new-arrival-title{
+        text-align: center;
+        span{
+            @include font($fontPlay, 1.125rem, $textColor8);
+            margin: 0;
+            
+            @include flex(center,center,none);
+            img{
+                padding: 4px;
+                @include Size(36px, 26px, cover)
+            }
+        }
+        h2{
+            @include font($fontPlay, 2.375rem, $textColor);
+
+        }
+        margin: 24px 0;
+
+    }
+    .new-arrival-list{
+        width: 100%;
+        height: 100%;
+        
+        .row{
+            justify-content: space-between;
+            .new-arrival-item{
+                @include flex(none, center, column);
+            // text-align: center;
+             position: relative;
+                .new-arrival-img{
+                    overflow: hidden;
+                width: 100%;
+                    max-height: 250px;
+                   position: relative;
+                   img{
+                        @include transition(1s, linear);
+                        
+                    }
+                    &:hover{
+                        img{
+                            transform: scale(1.8);
+
+                        }
+                        .new-arrival-other{
+    
+                            @include visibility(visible, 1);
+                        }
+                    }
+                   
+                   
+                   
+                    .new-arrival-other{
+                        @include visibility(hidden, 0);
+                        // height: 100px;
+                        // z-index: 100;
+                        @include transition(0.25s, linear);
+
+                        .other-icon{
+                            position: absolute;
+                            font-size: 1.2rem;
+                            height: 100%;
+                            top:25%;
+                            right:5px;
+                            text-align: center;
+                            // transform: translateY(-50%);
+                            @include flex(flex-start, center, column);
+                            span{
+                                line-height: 30px;
+                                width: 30px;height: 30px;
+                                max-width: 30px;
+                                max-height: 30px;
+                                background-color: $whiteColor;
+                                @include font(none, $whiteColor, $textColor8);
+                                // border: 1px solid #000;
+                                border-radius: 50%;
+                                padding:0 4px;
+                                margin: 4px 0;
+                                &:hover{
+                                    @include hover(pointer,$primaryColor, $whiteColor)
+                                }
+                            }
+                        }
+                        .other-btn{
+                            position: absolute;
+                            bottom: 0;
+                            width: 100%;
+                            text-align: center;
+                            button{
+                                @include font($fontPlay, 1rem, $whiteColor);
+                                padding: 8px;
+                                width: 100%;
+                               background-color: rgba($color: #000000, $alpha: 0.5);
+                               &:hover{
+                                @include hover(pointer, $textColor, $whiteColor )
+                               }
+
+                           }
+                        }
+                    }
+                }
+                .sale{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    padding: 2px;
+                    border-radius: 3px;
+                    @include font($fontPopin, 10px, $whiteColor);
+                    background-color: $primaryColor;
+                }
+                .hot{
+                    position: absolute;
+                    top:25px;
+                    left: 50px;
+                    padding: 2px;
+                    border-radius: 3px;
+                    @include font($fontPopin, 10px, $whiteColor);
+                    background-color: $primaryColor;
+                }
+                .arrival-product-content{
+                    padding: 12px;
+                    text-align: center;
+                        @include font($fontPlay, 0.88rem, $textColor);
+                    h3{
+                        a{
+                        @include font($fontPlay, 0.88rem, $textColor);
+
+                            &:hover{
+                            color: $primaryColor;
+                        }
+                        margin: 4px 0;
+
+                        }
+                    }
+                    .raiting{
+                        margin: 4px 0;
+                        color: $primaryColor;
+                    }
+                    .arrival-product-price{
+                        margin-top: 4px;
+                    }
+
+                }
+            }
+        }
+    }
+}

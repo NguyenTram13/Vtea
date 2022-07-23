@@ -1,0 +1,187 @@
+.footer{
+    width: 100%;
+    &-top{
+        background: url(../../img/background/footer-bg.jpg) no-repeat ;
+        background-size: cover;
+        .footer-top-content{
+            width: 100%;
+            padding: 50px 0;
+            @include flex(none, center, column);
+            // display: flex;
+            // flex-direction: column;
+            //  align-items: center;
+            .footer-img{
+                img{
+                    @include Size(136px,136px,cover);
+                    
+                    // max-width: 136px;
+                    // max-height: 136px;
+                   
+                }
+            }
+            .footer-text{
+                @include font($fontPlay, 2.4rem ,$whiteColor);
+                // color: $whiteColor;
+                // font-size: 2.4rem;
+                // font-family: $fontPlay;
+
+            }
+            .footer-input{
+                margin: 20px;
+                position: relative;
+                input{
+                    background-color: rgba(0,0,0,0.2);
+                    border-radius: 30px;
+                    padding:10px 15px;
+                    width: 500px;
+                    @include font($fontPopin, 0.9rem ,$textColor8);
+
+                    
+                }
+                button{
+                    position: absolute;
+                    top: 50%;
+                    right: 10px;
+                    transform: translateY(-50%);
+                    background-color: transparent;
+                    @include font($fontPopin, 0.7rem ,$primaryColor);
+
+                    
+                    text-transform: uppercase;
+                    &:hover{
+                        
+                        @include hover(pointer, none, $whiteColor);
+                    }
+                }
+
+            }
+
+        }
+    }
+    .footer-bottom{
+        background-color: #212121;
+        padding: 50px 100px;
+        // @include font($fontPopin, 0.9rem ,$textColor8);
+       
+        
+        .footer-bottom-content{
+            border-bottom: 1px solid $textColor8;
+            padding-bottom: 50px;
+            @include font($fontPopin, 0.9rem ,$textColor8);
+            font-family: $fontPopin;
+            .row{
+                .footer-left{
+
+                    .footer-logo{
+                        img{
+                            @include Size(138px,53px,cover);
+                        }
+                    }
+                    .footer-left-text{
+                        @include ColorText;
+                        margin-top:  12px;
+                    
+
+                    }
+                    .footer-left-time{
+                        margin: 0;
+                        @extend .footer-left-text;
+
+                    }
+
+                }
+                .footer-center{
+                    
+                    .footer-center-heading{
+                        // padding-left: 32px;
+                        // padding-bottom: 24px;
+                        @include font($fontPopin, 1.5rem ,$whiteColor);
+
+
+                    }
+                    .row{
+                        .footer-center-left{
+                            ul{
+                                padding: 0;
+                                a{
+                                    @include ColorText;
+                                    &:hover{
+                                        @include hover(pointer, none, $primaryColor);
+                                        
+                                    }
+                                }
+                            }
+
+                        }
+                        .footer-center-right{
+                            @extend .footer-center-left;
+                        }
+                    }
+                }
+                .footer-right{
+                    .footer-right-heding{
+                        @include font($fontPopin, 1.5rem ,$whiteColor);
+                       
+                        
+                    }
+                    .footer-right-contact{
+                        @include ColorText;
+                        // margin: 24px 0;
+                        span{
+                            display: block;
+                        }
+
+                    }
+                    .footer-right-link{
+                        @include font($fontPopin, 0.9rem ,$textColor8);
+
+                        .row{
+                            a{
+                                border: 1px solid  $textColor8;
+                                border-radius: 50%;
+                                // padding: 8px ;
+                                margin: 5px;
+                                max-width: 52px;
+                                min-height: 52px;
+                               
+                                @include font($fontPopin, 1.2rem ,$textColor8);
+                                
+                                @include flex(center, center,none);
+                                
+                                
+                                }
+                            .fb{
+                                    &:hover{
+                                        
+                                        @include hover(pointer,#3B5999, $whiteColor);
+                                    }    
+                            }
+                            .tw{
+                                &:hover{
+                                    @include hover(pointer,#00adef, $whiteColor);
+
+                                  
+                                }
+                            }
+                            .in{
+                                &:hover{
+                                    @include hover(pointer,#0073b2, $whiteColor);
+
+                                   
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+       
+        p{
+            @include ColorText;
+            text-align: center;
+            padding-top: 12px;
+
+        }
+    }
+    
+}

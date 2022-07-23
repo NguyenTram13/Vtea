@@ -1,0 +1,53 @@
+.contact-message{
+    .contact-message-content{
+        .row{
+            .cm-content-left{
+                img{
+                    padding: 24px;
+                    &:hover{
+                        animation: shake 0.5s;
+                        // animation-iteration-count: infinite;
+                    }
+                }
+            }
+            .cn-content-right{
+                @include flex(center, none, column);
+                padding: 32px;
+                h2{
+                    @include font($fontPlay, 1.625rem, $textColor)
+                }
+                p{
+                    @include font($fontPopin, 1rem, $textColor8)
+
+                }
+                form{
+
+                
+                .form-group{
+                    // margin: 12px;
+                    input{
+                    @include font($fontPopin, 1rem, $textColor8);
+                        
+                        padding: 15px 18px;
+                    }
+                    textarea{
+                        border: 1px solid #ccc;
+                        @extend  input;
+                    }
+                }
+                .send{
+                    text-align: center;
+                   text-transform: uppercase;
+                    background-color: $primaryColor;
+                    padding: 15px 39px;
+                    @include font($fontPlay, 0.875rem, $whiteColor);
+
+                    
+                    border-radius: 30px;
+                    margin: 12px;
+                }
+            }
+            }
+        }
+    }
+}

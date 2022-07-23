@@ -1,0 +1,49 @@
+.main-produce{
+    width: 100%;
+    background: url(/img/background/main-bg.png) no-repeat;
+    background-size: cover; 
+    .main-produce-content{
+        @include flex(space-around,flex-start,none);
+        margin: 50px auto;
+        padding: 50px;
+        gap: 50px;
+        max-width: 1400px;
+        .main-produce-left{
+            overflow: hidden;
+            img{
+                padding: 24px;
+                @include transition(0.25s, linear);
+                &:hover{
+                    transform: scale(1.4);
+                }
+            }
+        }
+        .main-produce-right{
+            
+            padding: 24px;
+            
+            h4{
+                @include font($fontPlay, 1.2rem,$primaryColor)
+            }
+            h2{
+                @include font($fontPlay, 3.2rem,$textColor)
+    
+            }
+            p{
+                @include font($fontPopin, 1rem,$textColor8)
+    
+            }
+            .right-img{
+    
+           
+            overflow: hidden;
+            img{
+                @include transition(0.25s, linear);
+                &:hover{
+                    transform: scale(1.2);
+                }
+            }
+         }
+        }
+    }
+}

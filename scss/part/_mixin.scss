@@ -1,0 +1,65 @@
+@mixin hover ($cursor,$background, $color){
+    cursor: $cursor;
+    background-color: $background;
+    color: $color;
+}
+@mixin Size($width,$height,$ob) {
+    max-width:$width;
+    max-height: $height;
+    object-fit: $ob;
+
+}
+@mixin flex ($jus,$align,$deco) {
+    display: flex;
+    justify-content: $jus;
+    align-items: $align;
+    flex-direction: $deco;
+    
+}
+@mixin ColorText {
+    color: $textColor8;
+    
+}
+@mixin font($font,$size, $color) {
+    font-family: $font;
+    font-size:$size ;
+    color: $color ;
+    
+}
+
+@mixin visibility ($vi, $op){
+    visibility: $vi;
+    opacity: $op;
+}
+  
+@mixin transition($second, $action) {
+    transition:  all $second $action;
+    
+}
+@mixin position($position,$top, $left, $right, $bottom, $size , $color) {
+    position: $position;
+        top: $top;
+        right: $right;
+        left: $left;
+        bottom: $bottom;
+        font-size:  $size;
+        color:$color ;
+        
+}
+@mixin title{
+    text-align: center;
+    span{
+        @include font($fontPlay, 1.125rem, $textColor8);
+        margin: 0;
+        
+        @include flex(center,center,none);
+        img{
+            padding: 4px;
+            @include Size(36px, 26px, cover)
+        }
+    }
+    h2{
+        @include font($fontPlay, 2.375rem, $textColor);
+
+    }
+}

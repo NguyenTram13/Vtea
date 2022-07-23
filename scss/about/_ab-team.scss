@@ -1,0 +1,116 @@
+.about-team{
+    margin-bottom: 50px;
+    .about-team-content{
+        .at-content-top{
+            margin-bottom: 32px;
+            div{
+                @include title;
+            }
+        }
+        .at-content-bottom{
+            .row{
+                .atc-bottom-item{
+                    padding:  24px;
+                    .atcb-item-img{ 
+                        width: 100%;
+                        position: relative;
+                        img{
+
+                            @include transition(0.25s, linear);
+                        }
+                        &:hover{
+                            img{
+    
+                                    
+                                        transform: scale(0.95);
+                            
+                                }
+                                .atcb-item-people{
+                                    @include visibility(visible, 1);
+
+                                }
+                            }
+                        .atcb-item-people{
+                            @include visibility(hidden, 0);
+                            @include transition(0.25s, linear);
+                            .atcb-item-icon{
+                                width: 100%;
+                                position: absolute;
+                                bottom: 20%;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                @include flex( center, center, row);
+                                
+                               
+                                    a{
+                                        // width: 100%;
+                                        border: 1px solid  $whiteColor;
+                                        border-radius: 50%;
+                                        // padding: 8px ;
+                                        margin: 5px;
+                                        width: 50px;
+                                        height: 50px;
+                                       
+                                        @include font($fontPopin, 1rem ,$whiteColor);
+                                        
+                                        @include flex(center, center,column);
+                                        
+                                        
+                                        }
+                                    .fb{
+                                            &:hover{
+                                                
+                                                @include hover(pointer,#3B5999, $whiteColor);
+                                            }    
+                                    }
+                                    .tw{
+                                        &:hover{
+                                            @include hover(pointer,#00adef, $whiteColor);
+        
+                                          
+                                        }
+                                    }
+                                    .in{
+                                        &:hover{
+                                            @include hover(pointer,#0073b2, $whiteColor);
+        
+                                           
+                                        }
+                                    }
+                                
+                            }
+                            .atcb-item-title{
+                                position: absolute;
+                                bottom:0;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                background-color: $whiteColor;
+                                width: 100%;
+                                text-align: center;
+                                h3{
+                                    a{
+
+                                        @include font($fontPlay, 1.375rem ,$textColor);
+                                        &:hover{
+                                            color: $primaryColor;
+                                        }
+                                    }
+                                }
+                                p{
+                                    a{
+
+                                        @include font($fontPopin, 0.875rem ,$textColor8);
+                                        &:hover{
+                                            color: $primaryColor;
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

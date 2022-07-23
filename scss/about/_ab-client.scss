@@ -1,0 +1,102 @@
+.about-client{
+    margin-bottom: 100px;
+    width: 100%;
+    .about-client-content{
+        padding:  50px 100px;
+        background: url(../../img/background/ab-client.png) no-repeat;
+        background-size: cover;
+        @include flex(none, center, column);
+
+        .ac-content-img{
+            margin: 24px;
+            text-align: center;
+            img{
+                @include Size(63px,53px,cover);
+
+            }
+        }
+        .ac-content-list{
+            padding:0 300px;
+
+            // position: relative;
+            max-width: 100%;
+            width: 100%;
+            position: relative;
+            &:hover{
+                .slick-arrow{
+                @include visibility(visible, 1);
+
+                }
+            }
+            .slick-arrow{
+                width: 30px;
+                height: 30px;
+                position: absolute; 
+                font-size: 2rem;
+                top: 50%;
+                transform: translateY((-50%));
+                color: $textColor8;
+                background-color: transparent;
+               @include flex(center, center,none);
+               @include transition(0.25s, linear);
+               @include visibility(hidden, 0);
+               
+               &:hover{
+                color: $primaryColor;
+          
+               }
+              }
+              .slick-prev{
+                  left: 10%;
+                  z-index: 2;
+                  // transform: translateX(-50%);
+              }
+              .slick-next{
+                
+      right: 10%;
+      z-index: 2;
+      // transform: translateX(50%);
+      
+  }
+
+            .ac-content-item1{
+                text-align: center;
+                p{
+                    @include font($fontPlay, 1rem, $textColor8);
+                     margin-bottom: 30px;
+                     line-height: 2rem;
+
+                }
+                h3{
+                    @include font($fontPlay, 1.125rem, $textColor);
+                    margin-bottom: 20px;
+                    
+                    
+                }
+                h4{
+                    @include font($fontPlay, 0.875rem, $textColor8);
+
+                }
+            }
+            .ac-content-item2{
+                text-align: center;
+                p{
+                    @include font($fontPlay, 1rem, $textColor8);
+                     margin-bottom: 30px;
+                     line-height: 2rem;
+
+                }
+                h3{
+                    @include font($fontPlay, 1.125rem, $textColor);
+                    margin-bottom: 20px;
+                    
+                    
+                }
+                h4{
+                    @include font($fontPlay, 0.875rem, $textColor8);
+
+                }
+            }
+        }
+    }
+}

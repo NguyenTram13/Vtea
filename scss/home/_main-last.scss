@@ -1,0 +1,172 @@
+.main-last{
+    width: 100%;
+    margin: 50px auto;
+    .main-last-content{
+        // max-width: 1400px;
+        .main-last-title{
+            text-align: center;
+        span{
+            @include font($fontPlay, 1.125rem, $textColor8);
+            margin: 0;
+            
+            @include flex(center,center,none);
+            img{
+                padding: 4px;
+                @include Size(36px, 26px, cover)
+            }
+        }
+        h2{
+            @include font($fontPlay, 2.375rem, $textColor);
+
+        }
+        margin: 24px 0;
+        }
+        .main-last-list{
+            .row{
+                .last-list-item{
+                    // border: 1px solid #ccc;
+                 margin: 12px 0;
+                    padding: 0 24px;
+                    
+                    .last-list-img{
+                        overflow: hidden;
+                        position: relative;
+                        
+                        img{
+                            transition: all 0.25s linear;
+                            // &:hover{
+                            //     transform: scale(1.2);
+                            // }
+                        }
+                        &:hover{
+                            img{
+                                transform: scale(1.3);
+    
+                            }
+                        }
+                        .lifestyle{
+                            position: absolute;
+                            top: 20px;
+                            right: 20px;
+                            background-color: rgba($color: #000000, $alpha: 0.5);
+                            // color: $whiteColor;
+                            padding: 3px 10px;
+                            @include font($fontPopin, 0.75rem,$whiteColor);
+                            &:hover{
+                                background-color: $primaryColor;
+                            }
+                        }
+                        .creative{
+                            position: absolute;
+                            top: 20px;
+                            right: 100px;
+                            background-color: rgba($color: #000000, $alpha: 0.5);
+                            // color: $whiteColor;
+                            padding: 3px 10px;
+                            @include font($fontPopin, 0.75rem,$whiteColor);
+                            &:hover{
+                                background-color: $primaryColor;
+                            }
+                        }
+                    }
+                    .last-list-element{
+                        border-left: 1px solid #ccc;
+                        border-right: 1px solid #ccc;
+
+                        border-bottom: 1px solid #ccc;
+
+                        padding: 24px;
+                        .last-list-date{
+                            margin: 0;
+                            a{
+                                @include font($fontPopin, 0.75rem, $textColor8 );
+                                &:hover{
+                                    color: $primaryColor;
+                                }
+
+                            }
+                        }
+                        h2{
+                            margin-bottom: 16px;
+                            a{
+
+                                @include font($fontPlay, 1.125rem, $textColor );
+                                margin-bottom: 16px;
+                                &:hover{
+                                    color: $primaryColor;
+                                }
+                            }
+                        }
+                        .last-list-comment{
+                            @include font($fontPopin, 0.875rem, $textColor8 );
+
+                        }
+                        .last-list-footer{
+                            @include flex(space-between,center,none);
+
+                           
+                                .last-list-left{
+                                    // isplay:inline-block;
+                                    @include flex(none,center,row);
+                                    span{
+                                        @include font($fontPopin, 0.875rem, $textColor8 );
+                                        padding:4px 2px;
+                                        overflow: hidden;
+                                        img{
+                                            transition: transform 0.25s linear;
+                                            @include Size(30px, 30px, cover);
+                                            border-radius: 50%;
+                                            
+                                        }
+                                        &:hover{
+                                            img{
+                                                transform: scale(1.2);
+                    
+                                            }
+                                        }
+                                    }
+                                    .last-name-user{
+                                        a{
+
+                                            @include font($fontPopin, 0.875rem, $textColor );
+                                            &:hover{
+                                               color: $primaryColor;
+                                           }
+                                        }
+                                    }
+                               
+                                
+                            }
+                            .last-list-right{
+                                     
+                                a{
+                                    @include font($fontPopin, 0.875rem, $textColor );
+                                    span{
+
+                                        
+                                        //  @include font($f?ontPopin, 0.875rem, $textColor );
+
+                                        
+                                        padding:4px 4px;
+                                        
+                                    }
+                                    &:hover{
+                                        color: $primaryColor;
+                                    }
+                                }
+                                
+                                // .last-list-heart{
+
+                                   
+                                // }
+                                // .last-list-cmt{
+                                //     @extend .last-list-heart
+                                // }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

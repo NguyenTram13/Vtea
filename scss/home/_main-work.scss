@@ -1,0 +1,83 @@
+.main-work{
+    width: 100%;
+    background: url(/img/background/main-bg.png);
+    margin: 100px 0;
+    .main-work-title{
+        text-align: center;
+        span{
+            @include font($fontPlay, 1.125rem, $textColor8);
+            margin: 0;
+            @include flex(center,center,none);
+
+           
+                img{
+                    padding: 4px;
+                    @include Size(36px, 26px, cover)
+                }
+            
+            
+        }
+        h2{
+            @include font($fontPlay, 2.375rem, $textColor);
+
+        }
+        margin: 50px 0;
+    }
+    .main-work-list{
+       max-width: 1300px;
+        margin: 24px auto;
+        .row{
+            .main-work-item{
+                @include flex(none, center, column);
+                .work-item-img{
+                    
+
+                        img{
+    
+                       @include Size(100px,100px,cover)
+                        }
+                    
+                }
+                .work-item-content{
+                    padding: 12px;
+                    @include font($fontPlay, 0.8rem, $textColor8);
+                    text-align: center;
+                    h4{
+                        
+
+                            @include font($fontPlay, 1.15rem, $textColor);
+                        
+
+                        
+
+                    }
+                    h5{
+                        
+                        @include font($fontPlay, 0.88rem, $textColor);
+                        text-transform: uppercase;
+                        position: relative;
+                        &::after{
+                            margin-bottom: -5px;
+                            content: "";
+                            position: absolute;
+                            width: 25%;
+                            height: 2px;
+                            left: 38%;
+                            bottom: 0;
+                            transform: translateX(-50%);
+                            background-color: $primaryColor;
+                            transform: scale(0,1);
+                            transition: transform 0.3s ease;
+                        }
+                        &:hover{
+                            &::after{
+                                transform: scale((1,1));
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

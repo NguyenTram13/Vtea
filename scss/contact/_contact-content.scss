@@ -1,0 +1,37 @@
+.contact-content{
+    width: 100%;
+    margin-bottom: 100px;
+    .contact-content-list{
+        
+       .row{
+        .contact-content-item{
+            // @include flex(none, center,none);
+            // gap: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .cc-item-icon{
+                
+                @include Size(55px, 55px,cover);
+                padding: 4px;
+
+            }
+            .cc-item-element{
+                padding: 8px;
+                width: 60%;
+                h3{
+                    @include font($fontPlay, 1.125rem, $textColor);
+                }
+                p{
+                    margin: 0;
+                    @include font($fontPopin, 0.875rem, $textColor8);
+                    a{
+                    @include font($fontPopin, 0.875rem, $textColor8);
+                        display: block;
+                    }
+                }
+            }
+        }
+       } 
+    }
+}

@@ -1,0 +1,118 @@
+.main-quality{
+    margin: 50px auto;
+    background: url(/img/background/main2.jpg) no-repeat;
+    background-attachment: fixed;
+    .main-quality-content{
+        .row{
+            .quality-content-left{
+                .quality-left-title{
+                    text-align: center;
+                   
+
+                        span{
+                            @include font($fontPlay, 1.125rem, $textColor8);
+                            margin: 0;
+                            
+                            @include flex(center,center,none);
+                            img{
+                                padding: 4px;
+                                @include Size(36px, 26px, cover)
+                            }
+                        }
+                    
+                                p{
+                        @include font($fontPlay, 0.88rem, $textColor8);
+                        margin: 0;
+                        
+                    }
+                    h2{
+                        @include font($fontPlay, 2.375rem, $whiteColor);
+            
+                    }
+                    margin: 32px 0;
+                }
+                .quality-left-list{
+                    .row{
+                        .quality-left-item{
+                            @include flex(flex-start, flex-start, none);
+                            margin-bottom: 12px;
+                            .quality-left-img{
+                                margin: 0 8px;
+                                img{
+                                    @include Size(64px, 64px, cover);
+                                    
+                                }
+                            }
+                            .quality-left-icon{
+                                padding-right: 4px;
+                                color: $primaryColor;
+                            }
+                            .quality-left-element{
+                                h3{
+                                    @include font($fontPlay, 1.5rem, $whiteColor);
+                                }
+                                p{
+                                    @include font($fontPopin, 0.88rem, $textColor8)
+                                    
+
+                                }
+                            }
+                        }
+                    }
+                }
+                .quality-left-bottom{
+                    .ql-bottom-btn{
+                        margin-top: 12px;
+                        a{
+                            @include font($fontPlay, 0.875rem, $whiteColor);
+                            background-color: $primaryColor;
+                            border-radius: 40px;
+                            padding: 10px 12px;
+                            text-transform: uppercase;
+                            &:hover{
+                                background-color: #bcee77;
+                            }
+                        }
+                    }
+                    .ql-bottom-contact{
+                        @include flex(none, center, row);
+                        span{
+                            @include font($fontPlay, 2rem, $whiteColor);
+                            padding-right: 12px;
+                        }
+                        .qlb-contact-item{
+                        @include flex(none, center, column);
+
+                            a{
+                            @include font($fontPopin, 0.875rem, $whiteColor);
+
+                            }
+                        }
+                    }
+                }
+            }
+            .quality-content-right{
+                img{
+                    padding: 32px;
+                    &:hover{
+                        animation: shake 0.5s;
+                        // animation-iteration-count: infinite;
+                    }
+                }
+            }
+        }
+    }
+}
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
