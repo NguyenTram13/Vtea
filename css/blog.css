@@ -386,7 +386,7 @@ img {
   width: 100%;
 }
 .footer-top {
-  background: url(../../img/background/footer-bg.jpg) no-repeat;
+  background: url(../img/background/footer-bg.jpg) no-repeat;
   background-size: cover;
 }
 .footer-top .footer-top-content {
