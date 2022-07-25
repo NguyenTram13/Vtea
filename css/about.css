@@ -803,7 +803,7 @@ img {
   height: 50vh;
   width: 100%;
   margin-bottom: 100px;
-  background: url(../../img/background/about-nav.jpg) no-repeat;
+  background: url("../img/background/about-nav.jpg") no-repeat;
   background-size: cover;
 }
 .main .about-background .about-background-content {
@@ -838,7 +838,7 @@ img {
   transform: scale(1.2);
 }
 .about-experience .about-experience-content .row .ae-content-right {
-  background: url(../../img/background/main-bg.png);
+  background: url(../img/background/main-bg.png);
   margin: auto 0;
   padding: 24px;
   text-align: center;
@@ -1018,7 +1018,7 @@ img {
 }
 .about-client .about-client-content {
   padding: 50px 100px;
-  background: url(../../img/background/ab-client.png) no-repeat;
+  background: url(../img/background/ab-client.png) no-repeat;
   background-size: cover;
   display: flex;
   justify-content: none;

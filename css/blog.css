@@ -690,7 +690,7 @@ img {
   height: 50vh;
   width: 100%;
   margin-bottom: 100px;
-  background: url(../../img/background/about-nav.jpg) no-repeat;
+  background: url("../img/background/about-nav.jpg") no-repeat;
   background-size: cover;
 }
 .main .about-background .about-background-content {
