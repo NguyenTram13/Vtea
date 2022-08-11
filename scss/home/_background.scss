@@ -14,7 +14,7 @@
       width: 30px;
       height: 30px;
       position: absolute; 
-      font-size: 4rem;
+      font-size: 3rem;
       top: 50%;
       transform: translateY((-50%));
       color: $textColor8;
@@ -40,27 +40,30 @@
       // transform: translateX(50%);
       
   }
+
+  
     .main-background-content {
-      background: url(../img/background/header-bg.jpg) no-repeat;
-      background-size: cover;
+      
       max-width: 100%;
       height: 100vh;
-      
-      .background-text {
+      position: relative;
+     
+      .bg-text1{
+        
         width: 100%;
         z-index: 777;
         // height: 100%;
         position: absolute;
         text-align: center;
-        top: 50%;
-        left: 50%;
+        
         transform: translate(-50%, -50%);
+       
         h4 {
           @include font($fontPlay, 1.5rem, $whiteColor);
         }
-        h3 {
+        h2 {
           margin-bottom: 32px;
-          @include font($fontPlay, 5.6rem, $whiteColor);
+          @include font($fontPlay, 4.375rem, $whiteColor);
         }
 
         a {
@@ -68,48 +71,71 @@
           border-radius: 40px;
           padding: 12px;
           text-transform: uppercase;
-          @include font($fontPlay, 1.2rem, $whiteColor);
+          @include font($fontPlay, 0.875rem, $whiteColor);
           &:hover {
             @include hover(pointer, $primaryColor,none);
             
         }
       }
+
     }
+    .bg-text1{
+      top: 50%;
+        left: 50%;
+    }
+
+    
   }
   .main-background2-content {
-    background: url(../img/background/header-bg2.jpg) no-repeat;
-    background-size: cover;
+      
     max-width: 100%;
     height: 100vh;
+    position: relative;
     
-    .background-text {
+    .bg-text2{
+      
       width: 100%;
-  
+      z-index: 777;
+      // height: 100%;
       position: absolute;
-      text-align: center;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+     
+      
+      // transform: translate(-50%, -50%);
       h4 {
         @include font($fontPlay, 1.5rem, $whiteColor);
+        
       }
-      h3 {
+      h2 {
+        // margin-bottom: 32px;
+        @include font($fontPlay, 4.375rem, $whiteColor);
+      }
+      h3{
+        @include font($fontPlay, 3.625rem, $whiteColor);
+
         margin-bottom: 32px;
-        @include font($fontPlay, 5.6rem, $whiteColor);
       }
 
       a {
+        margin-top: 32px;
         border: 1px solid $primaryColor;
         border-radius: 40px;
         padding: 12px;
         text-transform: uppercase;
-        @include font($fontPlay, 1.2rem, $whiteColor);
+        @include font($fontPlay, 0.875rem, $whiteColor);
         &:hover {
           @include hover(pointer, $primaryColor,none);
           
       }
     }
+
   }
+  .bg-text2{
+    top: 35%;
+      left: 20%;
+  }
+
+  
 }
+
 }
 }
