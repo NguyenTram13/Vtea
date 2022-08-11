@@ -169,11 +169,13 @@
   top: 0;
   right: 0;
   left: 0;
+  @include transition(0.25s, linear);
   bottom: 0;
   @include visibility(hidden, 0);
-  transform: translateX(100%);
-  @include transition(0.25s, linear);
   .model-cart-content {
+  @include transition(0.25s, linear);
+
+    transform: translateX(100%);
     padding: 0 24px;
     position: absolute;
     width: 25%;
@@ -291,7 +293,11 @@
     }
   }
 }
-.active {
-    transform: translateX(0);
+.model-cart.active {
   @include visibility(visible, 1);
+}
+.model-cart.active .model-cart-content{
+  transform: translateX(0);
+
+
 }

@@ -85,15 +85,14 @@ const product= [
     },
     
 ];
-function createitem(item) {
+function createitem(item,number=0) {
     let template = `
-    <div class="col-xs-12 col-sm-6 col-lg-4 new-arrival-item data-id="${item.id}">
+    <div class="col-xs-12 col-sm-6 col-lg-${number >0 ?12/number:4} new-arrival-item data-id="${item.id}">
         <div class="new-arrival-img">
            <img src="${item.img}">
             <div class="new-arrival-other">
                 <div class="other-icon">
-                    <span>
-                        <!-- <i class="fa-thin fa-bag-shopping"></i> -->
+                    <span class = "other-icon-cart">
                         <i class="fa-solid fa-bag-shopping"></i>
                     </span>
                     <span>
@@ -113,7 +112,7 @@ function createitem(item) {
             </div>
         </div>
         <div class="arrival-product-content">
-            <h3><a href="#">${item.name}</a></h3>
+            <h3><a href="details-product.html">${item.name}</a></h3>
             <div class="arrival-product-evaluate">
                 <span class="raiting">
                     <i class="fa-solid fa-star"></i>
@@ -133,12 +132,16 @@ function createitem(item) {
     `;
     return template;
   }
-  function loadItem(arrayItem, itemCart){
+
+  function loadItem(arrayItem, itemCart,number =0,position =0){
     let array=0;
-   
-    for( let i =0; i<arrayItem.length; i++){
+    console.log(position)
+    let index =0;
+    for( let i = position; i<arrayItem.length; i++){
+        if(number >0 && index == number) break;
         let item= arrayItem[i];
-        itemCart.insertAdjacentHTML('beforeend',createitem(item));
+        itemCart.insertAdjacentHTML('beforeend',createitem(item,number));
+        index++;
     }
 }
 

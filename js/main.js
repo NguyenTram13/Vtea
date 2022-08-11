@@ -1,3 +1,5 @@
+import {product,loadItem} from './data.js';
+
 window.addEventListener("load", function(){
     const cart= document.querySelector(".cart");
     const modelCart= document.querySelector(".model-cart");
@@ -26,14 +28,11 @@ window.addEventListener("load", function(){
     console.log(header);
     console.log(heightHeader);
    
- 
-
-   
 
     window.addEventListener("scroll",   function(e){
         
         let scroll= window.pageYOffset;
-        console.log(scroll);
+        // console.log(scroll);
         if(scroll>=heightHeader){
             header.classList.add("bg_header");
         }
@@ -41,14 +40,24 @@ window.addEventListener("load", function(){
             header.classList.remove("bg_header");
     
         }
-    })
+    });
+
+    const productList =document.querySelector(".product-list")
+    const productList2 =document.querySelector(".product-list2")
+
+    // const productItem= document.querySelectorAll(".new-arrival-item")
+    // console.log(product,productList);
+    loadItem(product,productList,4);
+  
+    loadItem(product,productList2,4,4);
+
 })
  
 
 //sclick  slider
 $(document).ready(function(){
     $('.main-background').slick({
-        autoplay:true,
+        // autoplay:true,
         Swipe: true,
         slidesToShow:1,
         infinity: true,

@@ -235,13 +235,14 @@ img {
   top: 0;
   right: 0;
   left: 0;
+  transition: all 0.25s linear;
   bottom: 0;
   visibility: hidden;
   opacity: 0;
-  transform: translateX(100%);
-  transition: all 0.25s linear;
 }
 .model-cart .model-cart-content {
+  transition: all 0.25s linear;
+  transform: translateX(100%);
   padding: 0 24px;
   position: absolute;
   width: 25%;
@@ -376,10 +377,13 @@ img {
   color: #fff;
 }
 
-.active {
-  transform: translateX(0);
+.model-cart.active {
   visibility: visible;
   opacity: 1;
+}
+
+.model-cart.active .model-cart-content {
+  transform: translateX(0);
 }
 
 .footer {
